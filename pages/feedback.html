@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Feedback Form</title>
+
+  <style>
+    /* Style for container div */
+    .container {
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    /* Style for box div */
+    .box {
+      position: relative; /* Make the box a reference for absolute positioning */
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 40px;
+    }
+
+    /* Style for close button */
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .submit {
+      float: right;
+      margin-right: 10%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <button class="close" onclick="window.close()">X</button> <!-- Close button -->
+      <center>
+        <h1>Feedback Form</h1>
+      </center>
+
+      <form action="submit-feedback.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="feedback">How did you find our website?</label>
+        <select id="feedback" name="feedback" required>
+          <option value="">Select an option</option>
+          <option value="5">Excellent</option>
+          <option value="4">Good</option>
+          <option value="3">Average</option>
+          <option value="2">Poor</option>
+        </select><br>
+
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="5" cols="50"></textarea><br>
+
+        <br>
+        <button type="submit" class="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
